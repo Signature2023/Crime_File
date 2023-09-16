@@ -1,0 +1,116 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dazzling Multi Forms Flat Responsive Widget Template :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Dazzling Multi Forms Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script> 
+<!-- //js -->
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <h1>Crime Files Registration Forms</h1>
+        
+         <div class="w3_agile_main_grids">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            
+                        </li>
+                        <li>
+                            <div class="agileits_w3layouts_main_grid">
+                                <h3>Ward member Registration Form</h3>
+                                <form action="php/ward_memb.php" method="post">
+                                    <span>
+                                        <label>Full name</label>
+                                        <input name="fname" type="text" placeholder="First Name" required="">
+                                    </span>
+                                    <span>
+                                        <label>Ward No</label>
+                                        <input name="ward_no" type="number" placeholder="Ward Number" required="">
+                                    </span>
+                                    <span>
+                                        <label>Ward Name</label>
+                                        <input name="ward_name" type="text" placeholder="Ward Name" required="">
+                                    </span>
+                                    <span>
+                                        <label>Gender</label>
+                                    
+                                    </span><br><br><br>
+
+                                        <input name="gender" type="radio" placeholder="Gender" value="Male" required="">Male
+                                        <input name="gender" type="radio" placeholder="Gender" value="Female">Female
+                                        
+                                    </span>
+                                    <span>
+                                        <label>Email</label>
+                                        <input name="email" type="email" placeholder="Your Email" required="">
+                                    </span>
+                                    <span>
+                                        <label>Place</label>
+                                        <input name="place" type="text" placeholder="Your Place" required="">
+                                    </span>
+                                    <span>
+                                        <label>Password</label>
+                                        <input name="password" type="Password" id="password1" placeholder="Your Password" required="">
+                                    </span>
+                                    <span>
+                                        <label>Confirm Password</label>
+                                        <input name="password" type="Password" id="password2" placeholder="Confirm Password" required="">
+                                    </span>
+                                    
+                                    <div class="w3_agileits_submit">
+                                        <input type="submit" value="submit" name="ward_reg">
+                                        <input type="reset" value="reset">
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="agileits_copyright">
+            <p>© 2017 Dazzling Multi Forms. All rights reserved | Design by <a href="//w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+<!-- password -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+        function validatePassword(){
+            var pass2=document.getElementById("password2").value;
+            var pass1=document.getElementById("password1").value;
+            if(pass1!=pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');  
+                //empty string means no validation error
+        }
+    </script>
+
+
+</body>
+</html>
