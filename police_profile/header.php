@@ -31,7 +31,8 @@ $email = $_SESSION['email'];
     <link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
     <link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
-
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -202,11 +203,11 @@ $email = $_SESSION['email'];
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Peoples</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html">Dashboard style 1</a></li>
-                            <li><a href="index2.html">Dashboard style 2</a></li>
+                            <li><a href="citizen.php">Citizen</a></li>
+                            <li><a href="ward.php">Ward Member</a></li>
                         </ul>
                     </li>
 
