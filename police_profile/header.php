@@ -223,6 +223,15 @@ $email = $_SESSION['email'];
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Lost and Found</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../police_profile/lostfound_pend.php">Pending</a></li>
+                            <li><a href="../police_profile/lostfound_active.php">Active</a></li>
+                            <li><a href="../police_profile/lostfound_close.php">Closed</a></li>
+                        </ul>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
                         </a>
                         <ul class="submenu">
