@@ -220,10 +220,14 @@ $email = $_SESSION['email'];
                             <li><a href="">Company verification</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Notifications</span>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
                         </a>
+                        <ul class="submenu">
+                            <li><a href="">Political Events</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
