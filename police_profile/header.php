@@ -217,8 +217,8 @@ $email = $_SESSION['email'];
                         </a>
                         <ul class="submenu">
                             <li><a href="../police_profile/accident_pend.php">Pending</a></li>
-                            <li><a href="">Active</a></li>
-                            <li><a href="">Closed</a></li>
+                            <li><a href="../police_profile/accident_active.php">Active</a></li>
+                            <li><a href="../police_profile/accident_close.php">Closed</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

@@ -44,7 +44,7 @@
                         <tbody>
                             <?php
                             // require('../php/connect.php');
-                            $sql = "SELECT * FROM accident_reports WHERE acc_status = '0'";
+                            $sql = "SELECT * FROM accident_reports WHERE acc_status = '1'";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -54,13 +54,13 @@
                                     echo "<td>" . $row["descr"] . "</td>";
                                     echo "<td>" . $row["sdate"] . "</td>";
                                     echo "<td>";
-                                    echo "<a href='./php/accident_appr.php?id=" . $row["CID"] . "&action=approve&acc_status=" . $row["acc_status"] . "' class='badge badge-primary'>Approve</a>";
+                                    echo "<a href='./php/accident_appr.php?id=" . $row["CID"] . "&action=reject&acc_status=" . $row["acc_status"] . "' class='badge badge-primary'>Close</a>";
                                     echo "<a href='./php/accident_appr.php?id=" . $row["CID"] . "&action=reject&acc_status=" . $row["acc_status"] . "' class='badge badge-success'>Reject</a>";
                                     echo "</td>";
                                     echo "</tr>";
                                 }
                             } else {
-                                echo "<tr><td colspan='6'>No pending accidents found.</td></tr>";
+                                echo "<tr><td colspan='6'>No active accidents found.</td></tr>";
                             }
                             $conn->close();
                             ?>

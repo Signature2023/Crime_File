@@ -80,29 +80,28 @@ require('header.php');
                                             <ul class="profile-edit-list row">
                                                 <li class="weight-500 col-md-12">
                                                 <div class="form-group">
-                                                        <label>Complaint ID</label>
-                                                        <input class="form-control form-control-lg" type="text" name="cid" >
+                                                        <label>Item Name</label>
+                                                        <input class="form-control form-control-lg" type="text" name="name" >
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Description</label>
-                                                        <input class="form-control form-control-lg" type="text" name="desc">
+                                                        <label>Submitted Date and time</label>
+                                                        <input class="form-control form-control-lg date-picker" type="date" name="sdate">
                                                     </div>
                                                         
-
-                    
                                                     <div class="form-group">
-                                                        <label>Complaint type</label>
-                                                        <input class="form-control form-control-lg" type="text" name="ctype" >
+                                                        <label>Category</label>
+                                                        <input class="form-control form-control-lg" type="text" name="categ" >
                                                     </div>
 
                                                     <div class="form-group">
                                                     <label>Select Photo</label>
                                                     <br/>
                                                     <input type="file" name="photo" required>
-                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Submitted Date</label>
-                                                        <input class="form-control form-control-lg date-picker" type="date" name="sdate">
+                                                    </div>
+
+                                                     <div class="form-group">
+                                                        <label>Description</label>
+                                                        <input class="form-control form-control-lg" type="text" name="descr">
                                                     </div>
                                                     <!-- <div class="form-group">
                                                         <label>Mobile No</label>
@@ -131,7 +130,7 @@ require('header.php');
 
                                                     <div class="form-group mb-0">
                                                         <!-- <input type="submit" name="add_accident" class="btn btn-primary" value="submit"> -->
-                                                        <input name="add_accident" type="submit" value="submit">
+                                                        <input name="add_lostfound" type="submit" value="submit">
                                                     </div>
                                                 </li>
                                             </ul>
