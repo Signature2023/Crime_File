@@ -78,6 +78,7 @@ $email = $_SESSION['email'];
                         <span class="user-name">The User</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
@@ -191,7 +192,7 @@ $email = $_SESSION['email'];
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li>
-                        <a href="index.php" class="dropdown-toggle no-arrow">
+                        <a href="../police_profile/index.php" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
@@ -210,7 +211,25 @@ $email = $_SESSION['email'];
                             <li><a href="ward.php">Ward Member</a></li>
                         </ul>
                     </li>
-
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Accident Reports</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../police_profile/accident_pend.php">Pending</a></li>
+                            <li><a href="">Active</a></li>
+                            <li><a href="">Closed</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

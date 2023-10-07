@@ -77,6 +77,7 @@ $email = $_SESSION['email'];
                         <span class="user-name">Ross C. Lopez</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()" ><i class="dw dw-logout"></i> Log Out</a>
@@ -190,7 +191,7 @@ $email = $_SESSION['email'];
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li>
-                        <a href="index.php" class="dropdown-toggle no-arrow">
+                        <a href="../citizen_profile/index.php" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
@@ -202,14 +203,28 @@ $email = $_SESSION['email'];
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Complaints</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html">Dashboard style 1</a></li>
-                            <li><a href="index2.html">Dashboard style 2</a></li>
+                            <li><a href="../citizen_profile/accident_reg.php">Accident report</a></li>
+                            <li><a href="">Lost and Found</a></li>
+                            <li><a href="">Anonymous call</a></li>
                         </ul>
                     </li>
-
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Verifications</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Passport verification</a></li>
+                            <li><a href="">Company verification</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-calendar1"></span><span class="mtext">Notifications</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

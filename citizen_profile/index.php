@@ -9,7 +9,7 @@ require('header.php');
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="title">
-                            <h4>blank</h4>
+                            <h4>Title</h4>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
                             <ol class="breadcrumb">
@@ -22,6 +22,19 @@ require('header.php');
                 </div>
             </div>
             <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="title">
+                         <h4>Reports</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                        
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
             </div>
         </div>
 

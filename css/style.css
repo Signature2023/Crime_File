@@ -5,8 +5,13 @@ body {
 }
 
 .navbar {
-  background-color:#000;
-  overflow: hidden;
+  background-color:#090c0a;
+  /* overflow: hidden; */
+}
+
+.text {
+  font-family:'Courier New', Courier, monospace ;
+  color: #e8e8e8;
 }
 
 .navbar a {
@@ -25,7 +30,8 @@ body {
 
 .dropdown {
   float: left;
-  overflow: hidden;
+  /* overflow: hidden; */
+ 
 }
 
 .dropdown .dropbtn {

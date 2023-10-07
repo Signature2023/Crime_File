@@ -11,7 +11,8 @@ body,
 html {
 	margin: 0;
 	padding: 0;
-	color :burlywood;
+	background:url(../images/log.png) no-repeat;
+	background-size: cover;
 }
 
 * {
@@ -93,7 +94,7 @@ ol {
 .w3l-login {
 	position: relative;
 	height: 100vh;
-	background-color: darksalmon;
+	background:url(../images/log.png) no-repeat;
 	background-size: cover;
 }
 
