@@ -17,6 +17,7 @@
         $gender = $_POST['gender'];
         $dob = $_POST['dob'];
         $mobile = $_POST['mobile'];
+        $aadhaar = $_POST['aadhaar_card'];
         $hno = $_POST['hno'];
         $pincode = $_POST['pincode'];
         $state = $_POST['state'];
@@ -25,7 +26,7 @@
 
 
 
-        $sql = "update citizen_reg set fname='$fname',lname='$lname',gender='$gender',dob='$dob',mobile='$mobile',hno='$hno',pincode='$pincode',state='$state',district='$district',citizen_id='$citizen_id' where email='$email'";
+        $sql = "update citizen_reg set fname='$fname',lname='$lname',gender='$gender',dob='$dob',mobile='$mobile',aadhaar_card='$aadhar',hno='$hno',pincode='$pincode',state='$state',district='$district',citizen_id='$citizen_id' where email='$email'";
         update($sql);
 
     ?>
