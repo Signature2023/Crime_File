@@ -240,6 +240,17 @@ if (mysqli_num_rows($result) > 0) {
                             <li><a href="../police_profile/lostfound_active.php">Active</a></li>
                             <li><a href="../police_profile/lostfound_close.php">Closed</a></li>
                         </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Anonymous reports</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../police_profile/anony_pend.php">Pending</a></li>
+                            <li><a href="../police_profile/anony_active.php">Active</a></li>
+                            <li><a href="../police_profile/anony_close.php">Closed</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>

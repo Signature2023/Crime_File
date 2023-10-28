@@ -220,7 +220,7 @@ if (mysqli_num_rows($result) > 0) {
                         <ul class="submenu">
                             <li><a href="../citizen_profile/accident_reg.php">Accident report</a></li>
                             <li><a href="../citizen_profile/lostfound_reg.php">Lost and Found</a></li>
-                            <li><a href="">Anonymous call</a></li>
+                            <li><a href="../citizen_profile/anonymous_reg.php">Anonymous report</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
