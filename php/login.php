@@ -40,7 +40,7 @@
                                 icon: 'info',
                                 title: 'Account under verification!',
                             }).then((result) => {
-                                window.location.replace('../../index.html');
+                                window.location.replace('../index.html');
                             });
                         </script>
                     <?php

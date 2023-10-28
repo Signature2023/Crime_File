@@ -23,13 +23,15 @@
         $state = $_POST['state'];
         $district = $_POST['district'];
         $citizen_id = $_POST['cid'];
+        $security = $_POST['security'];
+        $ans = $_POST['ans'];
         $password = $_POST['password'];
 
         $sql = "select * from crime_login where email='$email'";
         if (num($sql) == 0) {
-            $sql = "insert into citizen_reg values('$fname','$lname','$gender','$email','$dob','$mobile','$aadhaar_card','$hno','$pincode','$state','$district','$citizen_id')";
+            $sql = "insert into citizen_reg values('$fname','$lname','$gender','$email','$dob','$mobile','$aadhaar_card','$hno','$pincode','$state','$district','$citizen_id','$security','$ans')";
             insert($sql);
-            $sql2 = "insert into crime_login values('$email','$password',1,1)";
+            $sql2 = "insert into crime_login values('$email','$password',1,1,'$security','$ans')";
             insert($sql2);
     ?>
             <script>

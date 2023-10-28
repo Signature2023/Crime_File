@@ -55,7 +55,7 @@
                                     echo "<td>" . $row["name"] . "</td>";
                                     echo "<td>" . $row["ldate"] . "</td>";
                                     echo "<td>" . $row["categ"] . "</td>";
-                                    echo "<td><a href='view_image.php?filename=" . urlencode($row["photo"]) . "' target='_blank'>" . $row["photo"] . "</a></td>";
+                                    echo "<td><a class='btn btn-secondary btn-sm' href='../citizen_profile/php/uploads/".$row["photo"]."' target='_blank'>" . "View Image" . "</a></td>";
                                     echo "<td>" . $row["descr"] . "</td>";
                                     echo "<td>";
                                 }

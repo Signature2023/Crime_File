@@ -17,13 +17,15 @@
         $gender = $_POST['gender'];
         $email = $_POST['email'];  
         $place = $_POST['place'];
+        $security = $_POST['security'];
+        $ans = $_POST['ans'];
         $password = $_POST['password'];
 
         $sql = "select * from crime_login where email='$email'";
         if (num($sql) == 0) {
-            $sql = "insert into ward_reg values('$fname','$ward_no','$ward_name','$gender','$email','$place')";
+            $sql = "insert into ward_reg values('$fname','$ward_no','$ward_name','$gender','$email','$place','$security','$ans')";
             insert($sql);
-            $sql2 = "insert into crime_login values('$email','$password',2,1)";
+            $sql2 = "insert into crime_login values('$email','$password',2,1,'$security','$ans')";
             insert($sql2);
     ?>
             <script>

@@ -22,12 +22,12 @@ if (mysqli_num_rows($result) > 0) {
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<div class="title">
-							<h4>blank</h4>
+							<h4>Welcome to ward Profile</h4>
 						</div>
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">blank</li>
+								<li class="breadcrumb-item active" aria-current="page">Welcome to Ward Profile</li>
 							</ol>
 						</nav>
 					</div>

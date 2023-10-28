@@ -5,6 +5,15 @@ if(!isset($_SESSION['email'])) {
 }
 require('../php/connect.php');
 $email = $_SESSION['email'];
+$sql = "SELECT * FROM ward_reg WHERE email = '$email'";
+echo $sql;
+
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+	$row = mysqli_fetch_assoc($result);
+
+	$fname = $row['fname'];
+	}
 
 ?>
 
@@ -74,11 +83,11 @@ $email = $_SESSION['email'];
                         <span class="user-icon">
                             <img src="vendors/images/photo1.jpg" alt="">
                         </span>
-                        <span class="user-name">Ross C. Lopez</span>
+                        <span class="user-name"><?php echo $fname ?></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
-                        <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
+                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-settings2"></i> Change Password</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
                     </div>
