@@ -31,7 +31,7 @@ require('header.php');
                                     <!-- Setting Tab start -->
 
                                     <div class="profile-setting">
-                                        <form action="./php/lostfound_action.php" method="POST" enctype="multipart/form-data">
+                                        <form action="./php/noti_action.php" method="POST" enctype="multipart/form-data">
                                             <ul class="profile-edit-list row">
                                                 <li class="weight-500 col-md-12">
                                                 <div class="form-group">
@@ -39,19 +39,13 @@ require('header.php');
                                                         <input class="form-control form-control-lg" type="text" name="event" >
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Lost date and time</label>
-                                                        <input class="form-control form-control-lg date-picker" type="date" name="ldate">
+                                                        <label>Location</label>
+                                                        <input class="form-control form-control-lg " type="text" name="location">
                                                     </div>
                                                         
                                                     <div class="form-group">
-                                                        <label>Category</label>
-                                                        <input class="form-control form-control-lg" type="text" name="categ" >
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                    <label>Select Photo</label>
-                                                    <br/>
-                                                    <input type="file" name="photo" required>
+                                                        <label>Date and time</label>
+                                                        <input class="form-control form-control-lg " type="date" name="edate" >
                                                     </div>
 
                                                      <div class="form-group">
@@ -62,7 +56,7 @@ require('header.php');
 
                                                     <div class="form-group mb-0">
                                                         <!-- <input type="submit" name="add_accident" class="btn btn-primary" value="submit"> -->
-                                                        <input name="add_lostfound" type="submit" value="submit">
+                                                        <input name="add_noti" type="submit" value="submit">
                                                     </div>
                                                 </li>
                                             </ul>

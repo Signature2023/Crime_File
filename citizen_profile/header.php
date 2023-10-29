@@ -237,7 +237,7 @@ if (mysqli_num_rows($result) > 0) {
                             <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="">Political Events</a></li>
+                            <li><a href="../citizen_profile/noti_view.php">Political Events</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </li>
