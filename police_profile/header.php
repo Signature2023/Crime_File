@@ -251,13 +251,18 @@ if (mysqli_num_rows($result) > 0) {
                             <li><a href="../police_profile/anony_close.php">Closed</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="../police_profile/notification_reg.php">Political Events</a></li>
-                            <li><a href="">Others</a></li>
+                            <li><a href="../police_profile/notification_reg.php">Notifications</a></li> -->
+                            <li>
+                        <a href="../police_profile/notification_reg.php" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Notification</span>
+                        </a>
+                    </li>
+
                         </ul>
                     </li>
                 </ul>

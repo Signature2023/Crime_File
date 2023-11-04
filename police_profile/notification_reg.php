@@ -35,8 +35,13 @@ require('header.php');
                                             <ul class="profile-edit-list row">
                                                 <li class="weight-500 col-md-12">
                                                 <div class="form-group">
-                                                        <label>Event</label>
+                                                        <label>Event Name</label>
                                                         <input class="form-control form-control-lg" type="text" name="event" >
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Event Type</label>
+                                                        <input class="form-control form-control-lg " type="date" name="edate" >
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Location</label>
@@ -56,7 +61,7 @@ require('header.php');
 
                                                     <div class="form-group mb-0">
                                                         <!-- <input type="submit" name="add_accident" class="btn btn-primary" value="submit"> -->
-                                                        <input name="add_noti" type="submit" value="submit">
+                                                        <input name="add_noti" type="submit" class="btn btn-primary" value="submit">
                                                     </div>
                                                 </li>
                                             </ul>

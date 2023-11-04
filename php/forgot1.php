@@ -44,7 +44,7 @@ if ($result) {
                     <h3>Password reset</h3>
                     <br/>
 
-                    <form action="../forgot2.html" method="POST" class="signin-form">
+                    <form action="./forgot2.php" method="POST" class="signin-form">
                         <div class="form-input">
                             <label>Security Question</label>
                             <input type="text" name="security" required="" autofocus value="<?php echo $security_question; ?>" readonly>
