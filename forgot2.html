@@ -1,0 +1,67 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Password reset</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style5.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <!-- login form -->
+    <section class="w3l-login">
+        <div class="overlay">
+            <div class="wrapper">
+                <div class="logo">
+                    <a class="brand-logo" href="index.html"></a>
+                </div>
+                <div class="form-section">
+                    <h3>Password reset</h3>
+                
+                    <form action="php/forgot3.php" method="POST" class="signin-form">
+                        <div class="form-input">
+                            <label>New password</label>
+                            <input type="text" name="pswd" id="password1" required="" autofocus>
+                            <label>Confirm Password</label>
+                            <input type="text" name="conf_pswd" id="password2" required="" autofocus>
+                        </div>
+                        <button name="forgot_submit" class="btn btn-primary theme-button mt-4" type="submit" >Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- /login form -->
+    <!-- password -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+        function validatePassword(){
+            var pass2=document.getElementById("password2").value;
+            var pass1=document.getElementById("password1").value;
+            if(pass1!=pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');  
+                //empty string means no validation error
+        }
+    </script>
+<!-- /password -->
+
+</body>
+
+</html>

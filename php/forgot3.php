@@ -1,5 +1,3 @@
-
-
 <html>
 
 <head>
@@ -12,29 +10,31 @@
     <?php
     require('connect.php');
     session_start();
-    $a = $_POST["email"];
+    $email = $_SESSION["email"];
+    if (isset($_POST['forgot_submit'])) {
+    $pswd = $_POST["pswd"];
 
-    $sql="SELECT * FROM crime_login where email = '$a'";
-    $result=mysqli_query($conn, $sql);
-    if(mysqli_num_rows($result) > 0) {
-        $_SESSION['email']=$a;
+     $sql = "update crime_login set password='$pswd' where email='$email'";
+     update($sql);
+     
         
     ?>
             <script>
                 Swal.fire({
                     icon: 'success',
-                    title: 'Verified!',
+                    title: 'Crime login Updated!',
                 }).then((result) => {
-                    window.location.replace('./forgot1.php');
+                    window.location.replace('../login.html');
                 })
             </script>
         <?php
-        } else {
+    }
+         else {
         ?>
             <script>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Account not existing!',
+                    title: 'Updation error',
                 }).then((result) => {
                     window.location.replace('../../');
                 })
