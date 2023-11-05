@@ -1,9 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- <head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head> -->
 <?php
 require('header.php');
 $sql = "SELECT * FROM ward_reg WHERE email = '$email'";
+$sql2 = "SELECT * FROM crime_login WHERE email = '$email'";
+$result2 = sel($sql2);
+$row2 = mysqli_fetch_assoc($result2);
 echo $sql;
 
 $result = mysqli_query($conn, $sql);
+
 if (mysqli_num_rows($result) > 0) {
 	$row = mysqli_fetch_assoc($result);
 
@@ -37,29 +54,25 @@ if (mysqli_num_rows($result) > 0) {
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
 					<div class="pd-20 card-box height-100-p">
-						<div class="profile-photo">
-							<a href="modal" data-toggle="modal" data-target="#modal" class="edit-avatar"><i class="fa fa-pencil"></i></a>
-							<img src="vendors/images/photo1.jpeg" alt="" class="avatar-photo">
-							<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-dialog-centered" role="document">
-									<div class="modal-content">
-										<div class="modal-body pd-5">
-											<div class="img-container">
-												<img id="image" src="vendors/images/photo2.jpg" alt="Picture">
-											</div>
-										</div>
-										<div class="modal-footer">
-											<input type="submit" value="Update" class="btn btn-primary">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<h5 class="text-center h5 mb-0"><?php echo $fname ?></h5>
-						<p class="text-center text-muted font-14"></p>
-						<div class="profile-info">
-							<center>
+						
+					<form action="./upload.php" method="post" enctype="multipart/form-data">
+                              <div class="profile-photo">
+                              <input type="file" name="avatar" id="avatar" value="" required hidden>
+               
+            
+                            <label for="avatar"class="edit-avatar"><i class="fa fa-pencil"></i></label>
+                            <img src="img/<?php echo $row2['image']; ?>" id="avatar-image" alt="" class="avatar-photo">
+                            
+                        </div>
+                        <div style="text-align:center">
+                        <input name="selfpic" type="text" value="<?php echo $row2['image']; ?>" hidden>
+                        <input type="submit" name="profile_pic"  class="btn btn-info" value="Save">
+                        </div>
+                            </form>
+                        <h5 class="text-center h5 mb-0"><?php echo $fname ?></h5>
+                        <p class="text-center text-muted font-14"></p>
+                        <div class="profile-info">
+                            <center>
 							<h5 class="mb-20 h5 text-blue">Contact Information</h5>
 							<ul>
 								<li>
@@ -161,6 +174,7 @@ if (mysqli_num_rows($result) > 0) {
 		<?php
 		require('footer.php');
 		?>
+		</html>
 
 		<script>
 			$(document).ready(function() {

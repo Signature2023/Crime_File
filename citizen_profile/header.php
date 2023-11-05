@@ -6,6 +6,9 @@ if(!isset($_SESSION['email'])) {
 require('../php/connect.php');
 $email = $_SESSION['email'];
 $sql = "SELECT * FROM citizen_reg WHERE email = '$email'";
+$sql2 = "SELECT * FROM crime_login WHERE email = '$email'";
+$result2 = sel($sql2);
+$row2 = mysqli_fetch_assoc($result2);
 echo $sql;
 
 $result = mysqli_query($conn, $sql);
@@ -26,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+    <title>Crime Files</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -84,7 +87,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="vendors/images/photo1.jpg" alt="">
+                        <img src="img/<?php echo $row2['image']; ?>" alt="">
                         </span>
                         <span class="user-name"><?php echo $fname . " " . $lname ?></span>
                     </a>
@@ -223,22 +226,15 @@ if (mysqli_num_rows($result) > 0) {
                             <li><a href="../citizen_profile/anonymous_reg.php">Anonymous report</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Verifications</span>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="">Passport verification</a></li>
-                            <li><a href="">Company verification</a></li>
-                        </ul>
-                    </li>
+                    
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="../citizen_profile/noti_view.php">Political Events</a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="../citizen_profile/criminal_view.php">Criminal Events</a></li>
+                            <li><a href="../citizen_profile/political_view.php">Political Events</a></li>
+                            <li><a href="../citizen_profile/others_view.php">Others</a></li>
                         </ul>
                     </li>
                 </ul>

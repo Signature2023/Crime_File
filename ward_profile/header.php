@@ -6,6 +6,9 @@ if(!isset($_SESSION['email'])) {
 require('../php/connect.php');
 $email = $_SESSION['email'];
 $sql = "SELECT * FROM ward_reg WHERE email = '$email'";
+$sql2 = "SELECT * FROM crime_login WHERE email = '$email'";
+$result2 = sel($sql2);
+$row2 = mysqli_fetch_assoc($result2);
 echo $sql;
 
 $result = mysqli_query($conn, $sql);
@@ -81,7 +84,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="vendors/images/photo1.jpg" alt="">
+                            <img src="img/<?php echo $row2['image']; ?>" alt="">
                         </span>
                         <span class="user-name"><?php echo $fname ?></span>
                     </a>

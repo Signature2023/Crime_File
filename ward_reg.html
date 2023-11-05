@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dazzling Multi Forms Flat Responsive Widget Template :: w3layouts</title>
+<title>Crime Files Registration</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,10 +21,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery-2.2.3.min.js"></script> 
 <!-- //js -->
 <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<style>
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        background-color: rgb(256, 256, 256) !important;
+    }
+
+    .radio {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 13px 15px;
+        color: #691e1e;
+        outline: none;
+        width: 67.4%;
+        font-size: .85em;
+        background: none;
+        border: 1px solid #e9e9e9;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        background-color: rgb(256, 256, 256) !important;
+    }
+</style>
 </head>
 <body>
     <div class="main">
-        <h1>Crime Files Registration Forms</h1>
+        <h1>Crime Files Registration</h1>
         
          <div class="w3_agile_main_grids">
             <section class="slider">
@@ -35,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                         <li>
                             <div class="agileits_w3layouts_main_grid">
-                                <h3>Ward member Registration Form</h3>
+                                <h3>Ward member Registration</h3>
                                 <form action="php/ward_memb.php" method="post">
                                     <span>
                                         <label>Full name</label>
@@ -51,12 +76,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </span>
                                     <span>
                                         <label>Gender</label>
-                                    
-                                    </span><br><br><br>
-
-                                        <input name="gender" type="radio" placeholder="Gender" value="Male" required="">Male
-                                        <input name="gender" type="radio" placeholder="Gender" value="Female">Female
-                                        
+                                        <div class="radio">
+                                            <div>
+                                                <input name="gender" type="radio" placeholder="Gender"
+                                                    style="margin-right: 5px;" value="Male" required="">Male
+                                            </div>
+                                            <div>
+                                                <input name="gender" type="radio" placeholder="Gender"
+                                                    style="margin-right: 5px;" value="Female" required="">Female
+                                            </div>
+                                        </div>
                                     </span>
                                     <span>
                                         <label>Email</label>
@@ -70,7 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <label for="dropdown">Security Questions</label>
                                         <select name="security" id="dropdown">
                                             <option>What was the name of your first pet?</option>
-                                            <option>What was your favorite school teacher's name?</option>
+                                            <option>What was your favorite favorite food as a child?</option>
                                             <option>What is your favorite movie?</option>
                                         </select>
                                     </span>

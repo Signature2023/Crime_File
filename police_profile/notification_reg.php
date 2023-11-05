@@ -36,21 +36,20 @@ require('header.php');
                                                 <li class="weight-500 col-md-12">
                                                 <div class="form-group">
                                                         <label>Event Name</label>
-                                                        <input class="form-control form-control-lg" type="text" name="event" >
+                                                        <input class="form-control form-control-lg" type="text" name="ename" >
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Event Type</label>
-                                                        <input class="form-control form-control-lg " type="date" name="edate" >
+                                                    <label>Event type</label>
+                                                        <select name="etype" id="etype" class="form-control form-control-lg ">
+                                                            <option value="criminal">Criminal</option>
+                                                            <option value="political">Political</option>
+                                                            <option value="others">Others</option>
+                                                        </select>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Location</label>
                                                         <input class="form-control form-control-lg " type="text" name="location">
-                                                    </div>
-                                                        
-                                                    <div class="form-group">
-                                                        <label>Date and time</label>
-                                                        <input class="form-control form-control-lg " type="date" name="edate" >
                                                     </div>
 
                                                      <div class="form-group">

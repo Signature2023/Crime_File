@@ -14,9 +14,9 @@
     
 
     if (isset($_POST['add_noti'])) {
-        $event = $_POST['event'];
+        $event_name = $_POST['ename'];
+        $event_type = $_POST['etype'];
         $location = $_POST['location'];
-        $edate = $_POST['edate'];
         $descr = $_POST['descr'];
 
         // File upload configuration
@@ -32,8 +32,12 @@
         // Allow certain file formats
 
                 // Insert data into the database
-                $sql = "INSERT INTO notifications (event, location, edate, descr, eve_status) 
-                        VALUES ('$event', '$location', '$edate', '$descr' ,0)";
+                if ($event_type == "criminal") {
+
+                $sql = "INSERT INTO notifications (event_name, event_type, location, descr, eve_status) 
+                        VALUES (' $event_name','$event_type','$location','$descr',0)";
+                        
+
 
                 if ($conn->query($sql) === TRUE) {
                     ?>
@@ -58,7 +62,84 @@
                     </script>
                     <?php
                 } 
-            
+                }
+                else if ($event_type == "political") {
+                    
+
+                        $sql = "INSERT INTO notifications (event_name, event_type, location, descr, eve_status) 
+                                VALUES (' $event_name','$event_type','$location','$descr',1)";
+                                
+        
+        
+                        if ($conn->query($sql) === TRUE) {
+                            ?>
+                            <script>
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Report submitted successfully!',
+                                }).then((result) => {
+                                    window.location.replace('../index.php');
+                                })
+                            </script>
+                            <?php
+                        } else {
+                            ?>
+                            <script>
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error occurred while submitting report!',
+                                }).then((result) => {
+                                    window.location.replace('../error.html');
+                                })
+                            </script>
+                            <?php
+                        }
+                }
+                else if ($event_type == "others") {
+                    
+
+                    $sql = "INSERT INTO notifications (event_name, event_type, location, descr, eve_status) 
+                            VALUES (' $event_name','$event_type','$location','$descr',2)";
+                            
+    
+    
+                    if ($conn->query($sql) === TRUE) {
+                        ?>
+                        <script>
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Report submitted successfully!',
+                            }).then((result) => {
+                                window.location.replace('../index.php');
+                            })
+                        </script>
+                        <?php
+                    } else {
+                        ?>
+                        <script>
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error occurred while submitting report!',
+                            }).then((result) => {
+                                window.location.replace('../error.html');
+                            })
+                        </script>
+                        <?php
+                    }
+                    
+                } else {
+                    
+                    ?>
+                        <script>
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error occurred while submitting report!',
+                            }).then((result) => {
+                                window.location.replace('../error.html');
+                            })
+                        </script>
+                        <?php
+                }
     }
     ?>
     </body>
