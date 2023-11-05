@@ -86,6 +86,10 @@ require('header.php');
 														<label>Aadhaar No</label>
 														<input class="form-control form-control-lg" type="text" name="aadhaar">
 													</div>
+                                                    <div class="form-group">
+														<label>House no</label>
+														<input class="form-control form-control-lg" type="text" name="hno">
+													</div>
 													<div class="form-group">
 														<label>Pincode</label>
 														<input class="form-control form-control-lg" type="text" name="pincode">
@@ -98,29 +102,9 @@ require('header.php');
 														<label>District</label>
 														<input class="form-control form-control-lg" type="text" name="district">
 													</div>
-													<div class="form-group">
-														<label>City</label>
-														<input class="form-control form-control-lg" type="text" name="city">
-													</div>
-													<div class="form-group">
-														<label>Experience</label>
-														<input class="form-control form-control-lg" type="text" name="experience">
-													</div>
-													<div class="form-group">
-														<label>Designation</label>
-														<input class="form-control form-control-lg" type="text" name="designation">
-													</div>
-													<div class="form-group">
-														<label>Station Name</label>
-														<input class="form-control form-control-lg" type="text" name="station_name">
-													</div>
-													<div class="form-group">
-														<label>Police ID</label>
-														<input class="form-control form-control-lg" type="number" name="pid">
-													</div>
 
 													<div class="form-group mb-0">
-														<input type="submit" name="police_update" class="btn btn-primary" value="Register">
+														<input type="submit" name="verifications" class="btn btn-primary" value="Register">
 													</div>
 												</li>
 											</ul>
