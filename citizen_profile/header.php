@@ -93,7 +93,7 @@ if (mysqli_num_rows($result) > 0) {
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
-                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-settings2"></i> Change Password</a>
+                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-edit-1"></i> Change Password</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()" ><i class="dw dw-logout"></i> Log Out</a>
                     </div>
@@ -195,7 +195,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="index.html">
-                <img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+                <img src="vendors/images/" alt="" class="dark-logo">
                 <img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
@@ -207,18 +207,18 @@ if (mysqli_num_rows($result) > 0) {
                 <ul id="accordion-menu">
                     <li>
                         <a href="../citizen_profile/index.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="profile.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Profile</span>
+                            <span class="micon dw dw-user1"></span><span class="mtext">Profile</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Complaints</span>
+                            <span class="micon dw dw-invoice"></span><span class="mtext">Complaints</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="../citizen_profile/accident_reg.php">Accident report</a></li>
@@ -229,7 +229,7 @@ if (mysqli_num_rows($result) > 0) {
                     
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Notifications</span>
+                            <span class="micon dw dw-chat3"></span><span class="mtext">Notifications</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="../citizen_profile/criminal_view.php">Criminal Events</a></li>

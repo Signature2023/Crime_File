@@ -27,12 +27,12 @@ if (mysqli_num_rows($result) > 0) {
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+    <title>Crime-Files</title>
 
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png"> -->
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -92,7 +92,7 @@ if (mysqli_num_rows($result) > 0) {
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
-                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-settings2"></i> Change Password</a>
+                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-edit-1"></i> Change Password</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
                     </div>
@@ -193,9 +193,9 @@ if (mysqli_num_rows($result) > 0) {
 
     <div class="left-side-bar">
         <div class="brand-logo">
-            <a href="index.html">
-                <img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-                <img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+            <a href="index.php">
+                <img src="../images/s-11.png" alt="" class="light-logo">
+                <h2> Crime files</h2>
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -206,18 +206,18 @@ if (mysqli_num_rows($result) > 0) {
                 <ul id="accordion-menu">
                     <li>
                         <a href="../police_profile/index.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="profile.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Profile</span>
+                            <span class="micon dw dw-user1"></span><span class="mtext">Profile</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Peoples</span>
+                            <span class="micon dw dw-group"></span><span class="mtext">Peoples</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="citizen.php">Citizen</a></li>
@@ -226,7 +226,7 @@ if (mysqli_num_rows($result) > 0) {
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Accident Reports</span>
+                            <span class="micon dw dw-invoice"></span><span class="mtext">Accident Reports</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="../police_profile/accident_pend.php">Pending</a></li>
@@ -236,7 +236,7 @@ if (mysqli_num_rows($result) > 0) {
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Lost and Found</span>
+                            <span class="micon dw dw-search"></span><span class="mtext">Lost and Found</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="../police_profile/lostfound_pend.php">Pending</a></li>
@@ -246,7 +246,7 @@ if (mysqli_num_rows($result) > 0) {
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Anonymous reports</span>
+                            <span class="micon dw dw-user2"></span><span class="mtext">Anonymous reports</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="../police_profile/anony_pend.php">Pending</a></li>
@@ -256,7 +256,7 @@ if (mysqli_num_rows($result) > 0) {
                     </li>
                     <li class="dropdown">
                         <a href="verification_reg.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Verifications</span>
+                            <span class="micon dw dw-invoice"></span><span class="mtext">Verifications</span>
                         </a>
                     </li>
                     <!-- <li class="dropdown">
@@ -267,7 +267,7 @@ if (mysqli_num_rows($result) > 0) {
                             <li><a href="../police_profile/notification_reg.php">Notifications</a></li> -->
                             <li>
                         <a href="../police_profile/notification_reg.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Notification</span>
+                            <span class="micon dw dw-notification"></span><span class="mtext">Notification</span>
                         </a>
                     </li>
 

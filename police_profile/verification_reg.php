@@ -37,7 +37,7 @@ require('header.php');
 									<!-- Setting Tab start -->
 
 									<div class="profile-setting">
-										<form action="php/police_update.php" method="POST">
+										<form action="php/veri_action.php" method="POST">
 											<ul class="profile-edit-list row">
 												<li class="weight-500 col-md-12">
 													<div class="form-group">

@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+    <title>Crime-Files</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -90,7 +90,7 @@ if (mysqli_num_rows($result) > 0) {
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Edit Profile</a>
-                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-settings2"></i> Change Password</a>
+                        <a class="dropdown-item" href="change_pswrd.php"><i class="dw dw-edit-1"></i> Change Password</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
                         <a class="dropdown-item" href="javascript:;" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
                     </div>
@@ -204,22 +204,23 @@ if (mysqli_num_rows($result) > 0) {
                 <ul id="accordion-menu">
                     <li>
                         <a href="../ward_profile/index.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="profile.php" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-calendar1"></span><span class="mtext">Profile</span>
+                            <span class="micon dw dw-user1"></span><span class="mtext">Profile</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Verifications</span>
+                            <span class="micon dw dw-invoice"></span><span class="mtext">Verifications</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html">Dashboard style 1</a></li>
-                            <li><a href="index2.html">Dashboard style 2</a></li>
+                            <li><a href="veri_pending.php">Pending</a></li>
+                            <li><a href="veri_active.php">Active</a></li>
+                            <li><a href="veri_close.php">Closed</a></li>
                         </ul>
                     </li>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lost and found</title>
+    <title>Verifications</title>
     <link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
     <link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
@@ -19,12 +19,12 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="title">
-                                <h4>Lost and found</h4>
+                                <h4>Verifications</h4>
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Lost and Found Reports</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Verifications</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,39 +32,44 @@
                 </div>
 
                 <div class="pd-20 card-box mb-30">
-                    <table class="table">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Name of item</th>
-                                <th scope="col">Date of Loss</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Images</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">First name</th>
+                                <th scope="col">Last name</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Date of birth</th>
+                                <th scope="col">Mobile number</th>
+                                <th scope="col">Aadhaar</th>
+                                <th scope="col">House number</th>
+                                <th scope="col">Pincode</th>
+                                <th scope="col">State</th>
+                                <th scope="col">District</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             // require('../php/connect.php');
-                            $sql = "SELECT * FROM lost_found WHERE lost_status = '0'";
+                            $sql = "SELECT * FROM verifications WHERE veri_status = '2'";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr>";
-                                    echo "<td>" . $row["name"] . "</td>";
-                                    echo "<td>" . $row["ldate"] . "</td>";
-                                    echo "<td>" . $row["categ"] . "</td>";
-                                    echo "<td><a href='view_image.php?filename=" . urlencode($row["photo"]) . "' target='_blank'>" . $row["photo"] . "</a></td>";
-                                    echo "<td>" . $row["descr"] . "</td>";
-                                    echo "<td>";
-                                    echo "<a href='./php/lostfound_appr.php?id=" . $row["lid"] . "&action=approve&lost_status=" . $row["lost_status"] . "' class='badge badge-primary'>Approve</a>";
-                                    echo "<a href='./php/lostfound_appr.php?id=" . $row["lid"] . "&action=reject&lost_status=" . $row["lost_status"] . "' class='badge badge-success'>Reject</a>";
-                                    echo "</td>";
+                                    echo "<td>" . $row["fname"] . "</td>";
+                                    echo "<td>" . $row["lname"] . "</td>";
+                                    echo "<td>" . $row["gender"] . "</td>";                                   
+                                    echo "<td>" . $row["dob"] . "</td>";
+                                    echo "<td>" . $row["mobile_no"] . "</td>";
+                                    echo "<td>" . $row["aadhaar"] . "</td>";
+                                    echo "<td>" . $row["hno"] . "</td>";
+                                    echo "<td>" . $row["pincode"] . "</td>";
+                                    echo "<td>" . $row["state"] . "</td>";
+                                    echo "<td>" . $row["district"] . "</td>";
                                     echo "</tr>";
                                 }
                             } else {
-                                echo "<tr><td colspan='6'>No pending cases.</td></tr>";
+                                echo "<tr><td colspan='6'>No closed verifications.</td></tr>";
                             }
                             $conn->close();
                             ?>
@@ -73,7 +78,6 @@
                 </div>
 
                 <div class="footer-wrap pd-20 mb-20 card-box">
-                    Accident Reports - Powered by Your Company Name
                 </div>
             </div>
         </div>
