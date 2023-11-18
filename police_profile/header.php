@@ -195,7 +195,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="brand-logo">
             <a href="index.php">
                 <img src="../images/s-11.png" alt="" class="light-logo">
-                <h2> Crime files</h2>
+                <h2 style="color:white;font-size:20px;padding-left:20px;"> CRIME FILES</h2>
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>

@@ -34,7 +34,7 @@
             $sql = "insert into police_reg values('$fname','$lname','$gender','$email','$dob','$mobile_no','$hn','$pincode','$state','$district','$city','$experience','$designation','$station_name','$pid','$security','$ans')";
             echo $sql;
             insert($sql);
-            $sql2 = "insert into crime_login values('$email','$password',0,1,'$security','$ans')";
+            $sql2 = "insert into crime_login values('$email','$password',0,1,'$security','$ans','')";
             insert($sql2);
     ?>
             <script>
