@@ -8,13 +8,13 @@
 
 <body>
     <?php
-    require('../php/connect.php');//import external file
+    require('../php/connect.php'); //import external file
     if (isset($_POST['citizen_reg'])) {
         //submit button name
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $gender = $_POST['gender'];
-        $email = $_POST['email'];   
+        $email = $_POST['email'];
         $dob = $_POST['dob'];
         $mobile = $_POST['mobile_no'];
         $aadhaar_card = $_POST['aadhaar_card'];
@@ -26,12 +26,14 @@
         $security = $_POST['security'];
         $ans = $_POST['ans'];
         $password = $_POST['password'];
+        $photo_path = "../citizen_profile/img/photo1.jpeg";
+        $photo = basename($photo_path);
 
         $sql = "select * from crime_login where email='$email'";
         if (num($sql) == 0) {
             $sql = "insert into citizen_reg values('$fname','$lname','$gender','$email','$dob','$mobile','$aadhaar_card','$hno','$pincode','$state','$district','$citizen_id','$security','$ans')";
             insert($sql);
-            $sql2 = "insert into crime_login values('$email','$password',1,1,'$security','$ans')";
+            $sql2 = "insert into crime_login values('$email','$password',1,1,'$security','$ans','$photo')";
             insert($sql2);
     ?>
             <script>
