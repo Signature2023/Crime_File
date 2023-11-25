@@ -9,12 +9,12 @@ require('header.php');
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="title">
-                            <h4>blank</h4>
+                            <h4>Home Page</h4>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">blank</li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Home Page</li>
                             </ol>
                         </nav>
                     </div>
@@ -26,5 +26,5 @@ require('header.php');
         </div>
 
         <?php
-require('footer.php');
-?>
+        require('footer.php');
+        ?>

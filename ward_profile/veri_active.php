@@ -23,7 +23,7 @@
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Verifications</li>
                                 </ol>
                             </nav>
@@ -59,7 +59,7 @@
                                     echo "<tr>";
                                     echo "<td>" . $row["fname"] . "</td>";
                                     echo "<td>" . $row["lname"] . "</td>";
-                                    echo "<td>" . $row["gender"] . "</td>";                                   
+                                    echo "<td>" . $row["gender"] . "</td>";
                                     echo "<td>" . $row["dob"] . "</td>";
                                     echo "<td>" . $row["mobile_no"] . "</td>";
                                     echo "<td>" . $row["aadhaar"] . "</td>";

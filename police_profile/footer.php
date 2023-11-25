@@ -1,5 +1,5 @@
 <div class="footer-wrap pd-20 mb-20 card-box">
-    @DeskApp - Crime Files App- By Abhishek and Shone
+    @Crime Files App- By Abhishek and Shone
 </div>
 </div>
 </div>

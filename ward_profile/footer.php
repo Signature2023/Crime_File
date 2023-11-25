@@ -1,5 +1,5 @@
 <div class="footer-wrap pd-20 mb-20 card-box">
-    DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+    @Crime Files App- By Abhishek and Shone
 </div>
 </div>
 </div>
@@ -11,46 +11,46 @@
 
 <script src="vendors/scripts/datatable-setting.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script> 
-     function logout() { 
-         Swal.fire({ 
-             title: 'Logout', 
-             text: "Are you sure want to logout?", 
-             icon: 'question', 
-             showClass: { 
-                 popup: 'animated fadeInDown faster' 
-             }, 
-             hideClass: { 
-                 popup: 'animated zoomOut faster' 
-             }, 
-             showCancelButton: true, 
-             confirmButtonColor: '#3085d6', 
-             cancelButtonColor: '#d33', 
-             confirmButtonText: 'Yes!' 
-         }).then((result) => { 
-             if (result.isConfirmed) { 
-                 Swal.fire({ 
-                     title: "Logging out...", 
-                     timer: 1500, 
-                     timerProgressBar: true, 
-                     showConfirmButton: false, 
-                     allowOutsideClick: false, 
-                     allowEscapeKey: false, 
-                     didClose: () => { 
-                         window.location.replace('../php/logout.php'); 
-                     } 
-                 }); 
-                 Swal.showLoading(); 
-             } 
-  
-         }); 
-     } 
- </script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function logout() {
+        Swal.fire({
+            title: 'Logout',
+            text: "Are you sure want to logout?",
+            icon: 'question',
+            showClass: {
+                popup: 'animated fadeInDown faster'
+            },
+            hideClass: {
+                popup: 'animated zoomOut faster'
+            },
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Logging out...",
+                    timer: 1500,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    didClose: () => {
+                        window.location.replace('../php/logout.php');
+                    }
+                });
+                Swal.showLoading();
+            }
+
+        });
+    }
+</script>
 
 </body>
 
-</html> 
+</html>
 </body>
 
 </html>

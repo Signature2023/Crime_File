@@ -24,10 +24,10 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	$row = mysqli_fetch_assoc($result);
 
-	$fname = $row['fname']; 
+	$fname = $row['fname'];
 	$ward_no = $row['ward_no'];
 	$ward_name = $row['ward_name'];
-	$gender = $row['gender'];  
+	$gender = $row['gender'];
 	$place = $row['place'];
 }
 ?>
@@ -43,7 +43,7 @@ if (mysqli_num_rows($result) > 0) {
 						</div>
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Welcome to Ward Profile</li>
 							</ol>
 						</nav>
@@ -54,42 +54,50 @@ if (mysqli_num_rows($result) > 0) {
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
 					<div class="pd-20 card-box height-100-p">
-						
-					<form action="./upload.php" method="post" enctype="multipart/form-data">
-                              <div class="profile-photo">
-                              <input type="file" name="avatar" id="avatar" value="" required hidden>
-               
-            
-                            <label for="avatar"class="edit-avatar"><i class="fa fa-pencil"></i></label>
-                            <img src="img/<?php echo $row2['image']; ?>" id="avatar-image" alt="" class="avatar-photo">
-                            
-                        </div>
-                        <div style="text-align:center">
-                        <input name="selfpic" type="text" value="<?php echo $row2['image']; ?>" hidden>
-                        <input type="submit" name="profile_pic"  class="btn btn-info" value="Save">
-                        </div>
-                            </form>
-                        <h5 class="text-center h5 mb-0"><?php echo $fname ?></h5>
-                        <p class="text-center text-muted font-14"></p>
-                        <div class="profile-info">
-                            <center>
-							<h5 class="mb-20 h5 text-blue">Contact Information</h5>
-							<ul>
-								<li>
-									<span>Email Address:</span>
-									<?php echo $email ?>
-								</li>
-								<li>
-									<span>Ward Name:</span>
-									<?php echo $ward_name ?>
-								</li>
-								<li>
-									<span>Place:</span>
-									<?php echo $place ?>
-								</li>
 
+						<form action="./upload.php" method="post" enctype="multipart/form-data">
+							<div class="profile-photo">
+								<input type="file" name="avatar" id="avatar" value="" required hidden>
+
+
+								<label for="avatar" class="edit-avatar"><i class="fa fa-pencil"></i></label>
+								<img src="img/<?php echo $row2['image']; ?>" id="avatar-image" alt="" class="avatar-photo">
+
+							</div>
+							<div style="text-align:center">
+								<input name="selfpic" type="text" value="<?php echo $row2['image']; ?>" hidden>
+								<input type="submit" name="profile_pic" class="btn btn-info" value="Save">
+							</div>
+						</form>
+						<h5 class="text-center h5 mb-0"><?php echo $fname ?></h5>
+						<p class="text-center text-muted font-14"></p>
+
+						<div class="profile-info">
+							<ul>
+								<center>
+									<div class="card card-box">
+										<div class="card text-white bg-info card-box">
+											<div class="card-header">Contact Information</div>
+											<div class="card-body">
+
+												<!-- <h5 class="card-title weight-500">Contact Information</h5> -->
+												<li>
+													<span>Email Address:</span>
+													<?php echo $email ?>
+												</li>
+												<li>
+													<span>Ward Name:</span>
+													<?php echo $ward_name ?>
+												</li>
+												<li>
+													<span>Place:</span>
+													<?php echo $place ?>
+												</li>
+
+											</div>
+
+								</center>
 							</ul>
- 							</center>
 						</div>
 
 					</div>
@@ -174,20 +182,21 @@ if (mysqli_num_rows($result) > 0) {
 		<?php
 		require('footer.php');
 		?>
-		</html>
 
-		<script>
-			$(document).ready(function() {
+</html>
 
-				document.getElementById("gender").value="<?php echo $gender; ?>";
+<script>
+	$(document).ready(function() {
 
-				// var rbtn = document.getElementsByName('gender');
+		document.getElementById("gender").value = "<?php echo $gender; ?>";
 
-				// for (var i = 0; i < rbtn.length; i++) {
-				// 	if (rbtn[i].value == "<?php echo $gender; ?>") {
-				// 		rbtn[i].checked = true;
-				// 		break;
-				// 	}
-				// }
-			});
-		</script>
+		// var rbtn = document.getElementsByName('gender');
+
+		// for (var i = 0; i < rbtn.length; i++) {
+		// 	if (rbtn[i].value == "<?php echo $gender; ?>") {
+		// 		rbtn[i].checked = true;
+		// 		break;
+		// 	}
+		// }
+	});
+</script>
