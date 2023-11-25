@@ -112,7 +112,7 @@
                         <div class="progress-box text-center">
                             <input type="text" class="knob dial4" value="82" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#a683eb" data-angleOffset="180" readonly>
                             <h5 class="text-light-purple padding-top-10 h5">Total</h5>
-                            <span class="d-block">82% Average <i class="fa text-light-purple fa-line-chart"></i></span>
+                            <span class="d-block">65% Average <i class="fa text-light-purple fa-line-chart"></i></span>
                         </div>
                     </div>
                 </div>
