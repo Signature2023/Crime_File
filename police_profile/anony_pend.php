@@ -23,7 +23,7 @@
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Anonymous Reports</li>
                                 </ol>
                             </nav>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="footer-wrap pd-20 mb-20 card-box">
-                    Accident Reports - Powered by Your Company Name
+                    Accident Reports - Powered by Your Crime Files
                 </div>
             </div>
         </div>

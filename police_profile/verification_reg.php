@@ -9,12 +9,12 @@ require('header.php');
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<div class="title">
-							<h4>Citizen details</h4>
+							<h4>Verification</h4>
 						</div>
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Details</li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Verification</li>
 							</ol>
 						</nav>
 					</div>
@@ -57,8 +57,8 @@ require('header.php');
 															<option value="Female">Female</option>
 														</select>
 													</div>
-													
-<!-- 
+
+													<!-- 
 
 
 													<div class="form-group">
@@ -86,7 +86,7 @@ require('header.php');
 														<label>Aadhaar No</label>
 														<input class="form-control form-control-lg" type="text" name="aadhaar">
 													</div>
-                                                    <div class="form-group">
+													<div class="form-group">
 														<label>House no</label>
 														<input class="form-control form-control-lg" type="text" name="hno">
 													</div>
@@ -119,7 +119,7 @@ require('header.php');
 				</div>
 			</div>
 		</div>
- 
+
 		<?php
 		require('footer.php');
 		?>

@@ -115,7 +115,7 @@ if (mysqli_num_rows($result) > 0) {
 													<span>District:</span>
 													<?php echo $district ?>
 												</li>
-												<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
 											</div>
 
 

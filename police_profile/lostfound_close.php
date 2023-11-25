@@ -23,7 +23,7 @@
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Accident Reports</li>
                                 </ol>
                             </nav>
@@ -38,7 +38,7 @@
                                 <th scope="col">Name of item</th>
                                 <th scope="col">Date of Loss</th>
                                 <th scope="col">Category</th>
-                                <th scope="col">Images</th>
+                                <th scope="col" background-color="primary">Images</th>
                                 <th scope="col">Description</th>
                             </tr>
                         </thead>
@@ -55,7 +55,7 @@
                                     echo "<td>" . $row["name"] . "</td>";
                                     echo "<td>" . $row["ldate"] . "</td>";
                                     echo "<td>" . $row["categ"] . "</td>";
-                                    echo "<td><a class='btn btn-secondary btn-sm' href='../citizen_profile/php/uploads/".$row["photo"]."' target='_blank'>" . "View Image" . "</a></td>";
+                                    echo "<td><a class='btn btn-secondary btn-sm' href='../citizen_profile/php/uploads/" . $row["photo"] . "' target='_blank'>" . "View Image" . "</a></td>";
                                     echo "<td>" . $row["descr"] . "</td>";
                                     echo "<td>";
                                 }
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="footer-wrap pd-20 mb-20 card-box">
-                    Accident Reports - Powered by Your Company Name
+                    Accident Reports - Powered by Your Crime Files
                 </div>
             </div>
         </div>

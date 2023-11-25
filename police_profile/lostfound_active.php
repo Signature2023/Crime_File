@@ -23,7 +23,7 @@
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Lost and Found Reports</li>
                                 </ol>
                             </nav>
@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
+                            <?php
                             // require('../php/connect.php');
                             $sql = "SELECT * FROM lost_found WHERE lost_status = '1'";
                             $result = $conn->query($sql);
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="footer-wrap pd-20 mb-20 card-box">
-                    Accident Reports - Powered by Your Company Name
+                    Accident Reports - Powered by Crime Files
                 </div>
             </div>
         </div>
