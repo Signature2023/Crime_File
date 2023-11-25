@@ -4,7 +4,7 @@
 
 <head>
 
-    <?php require('header.php'); ?>
+
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-
+    <?php require('header.php'); ?>
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
@@ -110,7 +110,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-30">
                     <div class="card-box pd-30 height-100-p">
                         <div class="progress-box text-center">
-                            <input type="text" class="knob dial4" value="65" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#a683eb" data-angleOffset="180" readonly>
+                            <input type="text" class="knob dial4" value="82" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#a683eb" data-angleOffset="180" readonly>
                             <h5 class="text-light-purple padding-top-10 h5">Total</h5>
                             <span class="d-block">82% Average <i class="fa text-light-purple fa-line-chart"></i></span>
                         </div>
@@ -123,7 +123,6 @@
                     <div class="card-box pd-30 height-100-p">
                         <h4 class="mb-30 h4">Crime Reports Chart</h4>
                         <!-- <div id="compliance-trend" class="compliance-trend"></div> -->
-                        <a href="vendors\images\cybercrime-statistics-reported-losses-past-decade-1024x618.png"></a>
                         <img src="vendors/images/cybercrime-statistics-reported-losses-past-decade-1024x618.png" alt="Compliance Trend Image">
                     </div>
                 </div>
@@ -138,7 +137,7 @@
         </div>
     </div>
     <!-- js -->
-    <script src="vendors/scripts/core.js"></script>
+    <!-- <script src="vendors/scripts/core.js"></script> -->
     <script src="vendors/scripts/script.min.js"></script>
     <script src="vendors/scripts/process.js"></script>
     <script src="vendors/scripts/layout-settings.js"></script>
